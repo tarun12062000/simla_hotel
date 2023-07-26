@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin:0;
+}
+.Nav{
+    background-color:black;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img {
+  height: 59px;
+  width: 59px;
+  margin-left: 10px;
+}
+.icon img{
+  height: 45px;
+  width: 59px;
+  margin-right: 15px;
+}
+.ul_1{
+    display: flex;
+    list-style: none;
+
+}
+.li_1{
+    margin:10px;
+}
+/* Nav.module.css */
+
+/* Existing styles */
+
+/* Animation styles for the underline */
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Class for the underline animation */
+.underline {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* The actual underline (initial state) */
+  .underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0; 
+    background-color: rgb(10, 195, 66); 
+    transform-origin: left;
+    margin-top: 15px;
+    
+  }
+  
+  
+  .underline:hover::after {
+    width: 100%; 
+    transition: width 0.5s ease; 
+    margin-top: 15px;
+    
+  }
+ 
+  /* home page component style */
+
+  .home1{
+    
+    background: url('./images/f1.jpg');
+    height: 500px;
+    background-size: cover;
+  }
+  .home2{
+    color: white;
+    width:50%;
+  }
+  .home h1{
+    color:white;
+  }
+  .home p{
+    color: white;
+  }
