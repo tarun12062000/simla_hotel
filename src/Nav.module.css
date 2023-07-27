@@ -28,9 +28,7 @@
 .li_1{
     margin:10px;
 }
-/* Nav.module.css */
 
-/* Existing styles */
 
 /* Animation styles for the underline */
 @keyframes slideIn {
@@ -77,14 +75,159 @@
     background: url('./images/f1.jpg');
     height: 500px;
     background-size: cover;
+    filter: drop-shadow(10px 10px 10px #636363);
+    
   }
   .home2{
-    color: white;
+    padding: 20px;
     width:50%;
   }
-  .home h1{
-    color:white;
-  }
-  .home p{
+  .home2 h1{
+    font-size: 45px;
     color: white;
   }
+  .home2 p{
+    color: white;
+    font-size: 20px;
+  }
+
+  /* menu component css */
+
+  .btn {
+    margin-bottom: 1px;
+    margin-left: 50px;
+    text-align: center;
+    padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: darkgreen;
+  color: #fff;
+  border-radius: 4px;
+  transition: box-shadow 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .btn:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  
+  .btn:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+  }
+  .txt{
+    margin: 20px;
+  }
+  .menu1{
+    filter: drop-shadow(10px 10px 10px #636363);
+    background: black;
+  }
+  
+  .menu1 h1{
+    text-align: center;
+    font-size: 50px;
+    color:white
+  }
+  .menu2{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 20px 0 20px;
+
+  }
+  .pic img{
+    width:100%;
+    height: 180px;
+    border-radius: 64px
+  }
+  .card{
+    margin-bottom: 25px;
+    background: floralwhite;
+    max-width: 250px;
+    border-radius: 64px
+  }
+  .pic{
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    .menu2 {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+  @media (max-width: 480px) {
+    .menu2 {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+  }
+  
+
+  /*Review component styling*/
+
+  .review1 h1{
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+  }
+  .review1{
+    
+    background: black;
+  }
+  .dis{
+    display: flex;
+    justify-content: space-between;
+  }
+  .review2{
+    width: 50%;
+    padding-bottom: 20px;
+  }
+  .review_text{
+    color:white;
+    margin-left: 40px;
+    margin-bottom: 25px;
+
+  }
+  .review_form{
+    width: 40%;
+  }
+  .review_form h1{
+    font-size: 35px;
+  }
+  .Form{
+    padding-left: 50px;
+  }
+  
+  
+  
+  .order{
+    background-color: beige;
+    border: 2px solid black;
+    padding: 16px;
+   
+  }
+  .order h1{
+    text-align:center;
+  }
+  .tag{
+    display: flex;
+    margin: 15px;
+  }
+  .tag lable{
+    
+    color: white;
+  }
+  input#name , input#review{
+    width: 20%;
+}
+  .col25{
+    width:10% ;
+  }
+  /* .btn{
+    margin: 5px 150px ;
+    padding:5px;
+    color:white;
+    background-color: green;
+    border-radius: 5px ;
+  } */
