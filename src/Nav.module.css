@@ -71,12 +71,24 @@
   /* home page component style */
 
   .home1{
-    
+    filter: drop-shadow(10px 10px 10px #952727);
     background: url('./images/f1.jpg');
     height: 500px;
     background-size: cover;
-    filter: drop-shadow(10px 10px 10px #636363);
     
+    
+  }
+
+  .home1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay color with transparency */
+    filter: drop-shadow(10px 10px 10px #952727);
+    z-index: -1; /* To position the pseudo-element behind the content */
   }
   .home2{
     padding: 20px;

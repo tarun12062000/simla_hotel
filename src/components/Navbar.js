@@ -3,11 +3,13 @@ import styles from '../Nav.module.css';
 import rest1 from '../components/rest1.webp';
 import search_logo from '../components/search_logo.jpg';
 import cart from '../components/cart-logo.png';
+
 export default function Navbar(){
     const Navitem=["Home","About","Menu","Products","Review","Contact","Blogs"]
-
+        
     return(
         <div className={styles.Nav}>
+            
             <div className={styles.logo}>
                 <img src={rest1} alt="reload" />
             </div>
@@ -18,9 +20,15 @@ export default function Navbar(){
             </div>
             <div className={styles.icon}>
                 <img src={search_logo} alt="reload"  />
+                
                 <img src={cart} alt="reload"  />
+                {/* {cartItems.length > 0 && <span className={styles.cartItemCount}>{cartItems.length}</span>} */}
+                
             </div>
-
-        </div>
+            {/* {isCartOpen && (
+        <CartItems cartItems={cartItems} onClose={() => setIsCartOpen(false)} />
+                )}
+                <Menu handleAddToCart={handleAddToCart} /> */}
+            </div>
     )
-}
+};
