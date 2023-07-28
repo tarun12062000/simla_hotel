@@ -4,7 +4,7 @@ import styles from '../Nav.module.css';
 
 export default  function Menu(){
 
-    const temp=[{
+     const temp=[{
         src:'https://b.zmtcdn.com/data/pictures/4/19601154/23a2b41ff0c6015e2ddee66f3ec7f323_o2_featured_v2.jpg',
         text:'Marky Momos',
         prize:200

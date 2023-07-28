@@ -19,6 +19,7 @@ const CartItems = ({ cartItems, onClose }) => {
           ))}
         </ul>
       </div>
+      <button></button>
     </div>
   );
 };
