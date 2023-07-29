@@ -52,9 +52,12 @@ return(
   <lable htmlFor="review">Review:</lable>
   </div>
   <input type='text' id="review" value={suggetion} onChange={(e) => setSuggetion(e.target.value)}/>
+  
   </div>
-  <button type='submit' className={styles.btn}>Submit review</button>
-  <button type='submit' className={styles.btn} onClick={reset}>Clear review</button>
+  <div className={styles.form_btn}>
+  <button type='submit' className={styles.submit_btn}>Submit review</button>
+  <button type='submit' className={styles.submit_btn} onClick={reset}>Clear review</button>
+  </div>
   </form>
           </div>
           </div>

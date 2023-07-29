@@ -8,6 +8,16 @@ import search_logo from '../components/search_logo.jpg';
 import cart from '../components/cart-logo.png';
 
 export default function Navbar(){
+    const navbarRef = useRef();
+    const navHandler=()=>{
+        navbarRef.current.classList.toggle("active")
+    }
+    const cartRef= useRef();
+    const [cartActive, setCartActive] = useState(false);
+
+    const cartHandler = () => {
+        setCartActive((prevCartActive) => !prevCartActive);
+      };
     const temp=[{
         src:'https://b.zmtcdn.com/data/pictures/4/19601154/23a2b41ff0c6015e2ddee66f3ec7f323_o2_featured_v2.jpg',
         text:'Marky Momos',
@@ -23,19 +33,21 @@ export default function Navbar(){
         text:'PavBhaji',
         prize:150
     }]
-    const [searchActive, setSearchActive] = useState(false);
+    
   const searchRef = useRef();
-  const cartRef= useRef();
   const searchHandler = () => {
     searchRef.current.classList.toggle("active")
     // setSearchActive((prevSearchActive) => !prevSearchActive);
   };
-  const cartHandler=()=>{
-    console.log("Clicked cart icon");
-  console.log("cartRef.current:", cartRef.current);
-         cartRef.current.classList.toggle("active")
+
+
+//   const cartRef= useRef();
+//   const cartHandler=()=>{
+//     console.log("Clicked cart icon");
+//   console.log("cartRef.current:", cartRef.current);
+//          cartRef.current.classList.toggle("active")
         
-  }
+//   }
         
     return(
         <div className={styles.Nav}>
@@ -43,7 +55,7 @@ export default function Navbar(){
             <div className={styles.logo}>
                 <img src={rest1} alt="reload" />
             </div>
-            <div className={styles.ls}>
+            <div className={styles.ls}  ref={navbarRef}>
                 <a href="#Home">Home</a>
                 <a href='#About'>About</a>
                 <a href='#Menu'>Menu</a>
@@ -55,18 +67,10 @@ export default function Navbar(){
                   <Link to={`/${item.toLowerCase()}`}>{item}</Link></li>)}
                </ul> */}
             </div>
-            <div className={styles.icon}>
-                 <div className='fas fa-search' onClick={searchHandler}></div>
-                 <div className='fas fa-shopping-cart' onClick={cartHandler}></div>
-                 <div className='fas fa-bars' id={styles.ic}></div>
-                </div>
-                <div className={styles.searchform} ref={searchRef}>
-                    <input type="search" placeholder='search...' id={styles.searchbox} />
-                    {/* <label hatmlFor='search-box'></label> */}
-                </div>
-                <div className={styles.cartmenu} ref={cartRef}>
+            <div className={`${styles.cartmenu} ${cartActive ? 'active' : ''}`} ref={cartRef}>
+                
                 {temp.map((item,index)=>(
-                <div className={styles.cartpic} key={index} >
+                <div className={styles.cartpic}>
                     <span className='fas fa-times'></span>
                     <img src={item.src} alt="" />
                     <div className={styles.content}>
@@ -77,6 +81,17 @@ export default function Navbar(){
                 </div>)) }
                    <a href='#' className={styles.btn}>checkout Now</a>
                 </div>
+                <div className={styles.searchform} ref={searchRef}>
+                    <input type="search" placeholder='search...' id={styles.searchbox} />
+                    {/* <label hatmlFor='search-box'></label> */}
+                </div>
+            <div className={styles.icon}>
+                 <div className='fas fa-search' onClick={searchHandler}></div>
+                 <div className='fas fa-shopping-cart' onClick={cartHandler}></div>
+                 <div className='fas fa-bars' id={styles.ic} onClick={navHandler}></div>
+                </div>
+                
+                
                 </div>
 
     )};

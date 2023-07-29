@@ -47,7 +47,9 @@ export default  function Menu(){
                         <h2>{main.text}</h2>
                         <p>Prize:{main.prize}</p>
                     </div>
+                    <div className={styles.tarun}>
                     <button className={styles.btn}>Add To Cart</button>
+                    </div>
                 </div>
                 )}
             </div>

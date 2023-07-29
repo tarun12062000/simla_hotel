@@ -5,7 +5,7 @@ import styles from '../Nav.module.css';
 export default  function Home(){
     return(
         <div className={styles.home1}>
-            <div className={styles.home2}>
+            <div className={styles.ho2}>
             <h1>Exquisite flavors, warm ambiance, unforgettable dining experience awaits you!</h1>
             <p>Discover a gastronomic paradise at our restaurant, where each bite transports you to 
                culinary bliss. Indulge in our delectable dishes, carefully prepared to delight your 
