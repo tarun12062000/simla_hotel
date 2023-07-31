@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/simla_hotel/static/css/main.1c2aba57.css",
+    "main.js": "/simla_hotel/static/js/main.16ae1e29.js",
+    "static/js/787.815b690b.chunk.js": "/simla_hotel/static/js/787.815b690b.chunk.js",
+    "static/media/f1.jpg": "/simla_hotel/static/media/f1.05db6be750aa9a696b7b.jpg",
+    "static/media/cart-logo.png": "/simla_hotel/static/media/cart-logo.1bb35ddb6e3140813182.png",
+    "static/media/search_logo.jpg": "/simla_hotel/static/media/search_logo.7159ef6c5dcd69e44524.jpg",
+    "static/media/rest1.webp": "/simla_hotel/static/media/rest1.3474eee264f7827ed8ea.webp",
+    "index.html": "/simla_hotel/index.html",
+    "main.1c2aba57.css.map": "/simla_hotel/static/css/main.1c2aba57.css.map",
+    "main.16ae1e29.js.map": "/simla_hotel/static/js/main.16ae1e29.js.map",
+    "787.815b690b.chunk.js.map": "/simla_hotel/static/js/787.815b690b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c2aba57.css",
+    "static/js/main.16ae1e29.js"
+  ]
+}
